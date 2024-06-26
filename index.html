@@ -1,11 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>포트폴리오</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.25/fullpage.min.css" />
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/comm.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.25/fullpage.min.js"></script>
+    <script defer src="./js/index.js"></script>
 </head>
 <body>
-    git만듬
+    <header>
+      <nav class="nav-bg-color">
+      <div class="container">
+        <a class="navbar-brand" href="./yerim.html">YERIM KIM</a>
+        <ul class="menu">
+          <li class="menu-item"><a href="#profile">Profile</a></li>
+          <li class="menu-item"><a href="#portfolioAll">Portfolio</a></li>
+          <li class="menu-item"><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    </header>
+    <div id="fullpage">
+        <div class="section">
+            <div class="title1"><span class='welcome'>Welcome to my</span> <br>Portfolio</div>
+            <!-- 회전하는 이미지 -->
+            <img src="./images/star-1.png" class="rotate-image1" alt="Rotating Image">
+            <img src="./images/star-2.png" class="rotate-image2" alt="Rotating Image">
+            <img src="./images/star-3.png" class="rotate-image3" alt="Rotating Image">
+        </div>
+
+
+        <!-- section2 -->
+        <div class="section">
+            <div class="profile" id="profile">
+          
+        <div class="pic">
+          <div class="title">
+            안녕하세요!
+            <br>
+            UX/UI 디자이너 김예림입니다😀
+          </div>
+            <img src="./images/profile.png" alt="프로필 사진">
+        
+        <div class="profile-left-info">
+             <ul class="profile-left-bottom">
+                <li><i class="fa-solid fa-cake-candles"></i> 1997. 11. 06</li>
+                <li><i class="fa-solid fa-phone"></i> 010-7376-7809</li>
+                <li><i class="fa-solid fa-envelope"></i> kyl7809@gmail.com</li>
+             </ul>
+                                <!-- <p class="words">
+                                    <i class="fa-solid fa-cake-candles"></i> 1997. 11. 06
+                                    <br>
+                                    <i class="fa-solid fa-phone"></i> 010-7376-7809
+                                    <br>
+                                    <i class="fa-solid fa-envelope"></i> kyl7809@gmail.com
+
+                                </p> -->
+        </div>
+        </div>
+        <div class="word">
+            <div class="right1">
+                        <ul class="profile-depth1">
+                             <li>
+                                <h4>COURSE & EXPERIENCE</h4>
+                                <ul class="profile-depth2">
+                                    <li><span class="date">2024.05-2024.06</span> <br> <span class="name"> UX/UI 웹&모바일 실무과정</span></li>
+                                    
+                                    <li><span class="date">2023.07-2023.10</span>  <br><span class="name">  데이터드리븐 UX/UI디자이너 과정</span></li>
+                                    <li><span class="date">2020.01-2020.05</span>  <br><span class="name">  미국 교환학생</span></li>
+                                    
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>EDUCATION</h4>
+                                <ul class="profile-depth2">
+                                    <li><span class="date">2021.08 졸업</span><br>
+                                        <span class="name"> 영어영문학전공</span><br>
+                                        <span class='miner'>경영학 부전공</span></li>
+                                </ul>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                    <div class="right2">
+                        <ul class="profile-depth1">
+                            <li>
+                                <h4>WORK EXPERIENCE</h4>
+                                <ul class="profile-depth2">
+                                    <li><span class="date">2023.10-2024.01</span> <br> <span class="name">  (주)웅진씽크빅 UI/UX 인턴형 프로그램</span></li>
+                                    <li><span class="date">2022.07-2022.11</span><br><span class="name"> (주)엑셀리언트 글로벌SEO팀 주임</span></li>
+                                    <li><span class="date">2021.12-2022.03</span><br><span class="name"> (주)메디쿼터스 마케팅/기획팀 인턴</span></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>CERTIFICATE</h4>
+                                <ul class="profile-depth2">
+                                    <li><span class="date">2023</span> <br><span class="name"> TOEIC</span> <br><span class="name"> OPIc </span></li>
+                                    
+                                    <li><span class="date">2022</span><br> <span class="name"> GTQi 1급</span><br><span class="name"> GTQ 1급</span></li>
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    </div>
+        </div>
+
+
+        <!-- section3 -->
+        <div class="section">
+                   <div class="port-title">
+            저의 작업물들입니다. 둘러보세요!<br>
+           <!-- <span>하단 프로젝트 클릭 시 해당 페이지로 이동합니다.</span> -->
+          </div>
+        <ul class="list">
+          
+        <li class="port">
+            <a class="box box1" href="#">
+                <div class="thumbnail">
+                    <img src="./images/리클-표지newest.png">
+
+                </div>
+                <div class="description">
+                <p class="title">리클 앱 리디자인</p>
+                <p class="text">헌 옷 수거 서비스인 리클의 앱을 스프린트, 
+                    UT를 통해 리디자인 하는 프로젝트였습니다.</p>
+                </div>
+                </a>
+            </li>
+        <li class="port">
+            <a class="box" href="#">
+                <div class="thumbnail">
+                    <img src="./images/sfacfolio-thumbnail.png">
+
+                </div>
+                <div class="description">
+                <p class="title">스팩폴리오 서비스 기획/디자인</p>
+                <p class="text"> 디자이너와 개발자의 취업을 돕는 플랫폼인 스팩폴리오의 기획, 
+                    디자인 프로젝트였습니다.</p>
+                </div>
+                </a>
+            </li>
+        <li class="port" >
+            <a class="box"  href="#">
+                <div class="thumbnail">
+                    <img src="./images/유데미썸네일.png">
+
+                </div>
+                <div class="description">
+                <p class="title">유데미 큐레이션 웹앱 리디자인</p>
+                <p class="text"> 사용자가 웅진 유데미 큐레이션의 역할을 잘 이해할 수 있도록
+                     웹앱 UI를 개선하였습니다.</p>
+                </div>
+                </a>
+            </li>
+        <li class="port" >
+            <a class="box"  href="#">
+                <div class="thumbnail">
+                    <img src="./images/캐치클라우드표지.png">
+
+                </div>
+                <div class="description">
+                <p class="title">동기부여 서비스 기획/디자인</p>
+                <p class="text"> 목표를 달성할 수 있도록 도와주는 서비스인 '캐치클라우드'를 기획하고 디자인하였습니다.</p>
+                </div>
+                </a>
+            </li>
+       
+      
+            
+    </ul>
+        </div>
+        <div class="section">Some section</div>
+    </div>
 </body>
 </html>
