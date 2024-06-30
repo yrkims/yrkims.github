@@ -1,65 +1,65 @@
-@import 'variables';
-@import 'reset';
+@import "variables";
+@import "reset";
 
 $color_1: rgba(29, 29, 29, 1);
 $color_2: rgb(63, 63, 63);
 $color_3: rgb(197, 55, 253);
 $color_4: inherit;
 $color_5: rgba(100, 100, 100);
-$font-family_1: 'SUITE-Regular';
-$font-family_2: 'Cafe24Ohsquare';
+$font-family_1: "SUITE-Regular";
+$font-family_2: "Cafe24Ohsquare";
 $background-color_1: rgba(172, 225, 255, 1);
 $background-color_2: rgba(89, 148, 236, 1);
 
 /* 마우스 커서 */
 /* 페이드인과 내려오는 효과를 위한 애니메이션 */
 @keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -30%) translateY(-10px);
-        /* 초기 상태: 위쪽으로 이동 */
-    }
-    100% {
-        opacity: 1;
-        transform: translate(-50%, -10%) translateY(0);
-        /* 최종 상태: 원래 위치 */
-    }
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -30%) translateY(-10px);
+    /* 초기 상태: 위쪽으로 이동 */
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -10%) translateY(0);
+    /* 최종 상태: 원래 위치 */
+  }
 }
 /* 회전하는 이미지1 */
 /* 회전 애니메이션 */
 @keyframes spin {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-        /* 초기 상태 */
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-        /* 최종 상태 */
-    }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    /* 초기 상태 */
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+    /* 최종 상태 */
+  }
 }
 /* 회전하는 이미지2 */
 /* 회전 애니메이션 */
 @keyframes spin {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-        /* 초기 상태 */
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-        /* 최종 상태 */
-    }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    /* 초기 상태 */
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+    /* 최종 상태 */
+  }
 }
 /* 회전하는 이미지3 */
 /* 회전 애니메이션 */
 @keyframes spin {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-        /* 초기 상태 */
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-        /* 최종 상태 */
-    }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    /* 초기 상태 */
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+    /* 최종 상태 */
+  }
 }
 /* 포트폴리오 타이틀 스타일 */
 /* 포트폴리오 목록 리스트 스타일 */
@@ -69,1327 +69,1707 @@ $background-color_2: rgba(89, 148, 236, 1);
 /* 포트폴리오 제목 스타일 */
 /* 포트폴리오 설명 스타일 */
 body {
-    cursor: url('../images/cursor.png') 3 3, auto;
+  cursor: url("../images/cursor.png") 3 3, auto;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    font-family: $font-family_1;
-    font-size: 1rem;
-    background: rgba(255, 255, 251, 1);
-    list-style: none;
-    text-align: left;
-    color: $color_1;
+  margin: 0;
+  padding: 0;
+  font-family: $font-family_1;
+  font-size: 1rem;
+  background: rgba(255, 255, 251, 1);
+  list-style: none;
+  text-align: left;
+  color: $color_1;
 }
 
 .container {
-    position: relative;
-    max-width: 1280px;
-    width: 100%;
-    margin: auto;
+  position: relative;
+  max-width: 80rem;
+  width: 100%;
+  margin: auto;
 }
 .navbar-brand {
-    font-size: large;
-    font-weight: 700;
-    font-size: 2.2rem;
+  font-size: large;
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: $color_2;
+  text-decoration: none;
+  font-family: $font-family_2;
+}
+.nav-bg-color {
+  position: sticky;
+  padding: 30px 80px;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.menu {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.menu-item {
+  margin-right: 20px;
+  &:last-child {
+    margin-right: 0;
+  }
+  a {
+    padding: 16px;
     color: $color_2;
     text-decoration: none;
     font-family: $font-family_2;
-}
-.nav-bg-color {
-    position: sticky;
-    padding: 30px 80px;
-}
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    &:hover {
+      color: $color_3;
     }
-}
-.menu {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-.menu-item {
-    margin-right: 20px;
-    &:last-child {
-        margin-right: 0;
-    }
-    a {
-        padding: 16px;
-        color: $color_2;
-        text-decoration: none;
-        font-family: $font-family_2;
-        font-size: 24px;
-        transition: color 0.3s ease;
-        &:hover {
-            color: $color_3;
-        }
-    }
+  }
 }
 .section {
-    &:first-child {
-        background-image: url(../images/home-background.png);
-        background-size: 1300px;
-        background-position: center center;
-        background-repeat: no-repeat;
-    }
-    &:nth-child(1) {
-        .title1 {
-            position: absolute;
-            top: 45%;
-            left: 49%;
-            transform: translate(-50%, 0%);
-            font-family: $font-family_2;
-            font-size: 4.5rem;
-            transform: translate(-50%, -30%) translateY(-10px);
-            opacity: 0;
-            animation: fadeInDown 1s ease-out forwards;
-            text-align: center;
-        }
-    }
+  &:first-child {
+    background-image: url(../images/home-background.png);
+    background-size: 1300px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  &:nth-child(1) {
     .title1 {
-        .welcome {
-            font-size: 3rem;
-        }
+      position: absolute;
+      top: 45%;
+      left: 49%;
+      transform: translate(-50%, 0%);
+      font-family: $font-family_2;
+      font-size: 4.5rem;
+      transform: translate(-50%, -30%) translateY(-10px);
+      opacity: 0;
+      animation: fadeInDown 1s ease-out forwards;
+      text-align: center;
     }
-    .pic {
-        .title {
-            font-weight: 800;
-            text-align: left;
-        }
-        img {
-            border: 3px rgba(29, 29, 29, 1) solid;
-            border-radius: 30px;
-        }
+  }
+  .title1 {
+    .welcome {
+      font-size: 3rem;
     }
+  }
+  .pic {
+    .title {
+      font-weight: 800;
+      text-align: left;
+    }
+    img {
+      border: 3px rgba(29, 29, 29, 1) solid;
+      border-radius: 30px;
+    }
+  }
 }
 .rotate-image1 {
-    position: absolute;
-    top: 250px;
-    right: 350px;
-    transform: translate(-50%, -50%);
-    animation: spin 4s linear infinite;
+  position: absolute;
+  top: 250px;
+  right: 350px;
+  transform: translate(-50%, -50%);
+  animation: spin 4s linear infinite;
 }
 .rotate-image2 {
-    position: absolute;
-    top: 250px;
-    left: 400px;
-    transform: translate(-50%, -50%);
-    animation: spin 5s linear infinite;
+  position: absolute;
+  top: 250px;
+  left: 400px;
+  transform: translate(-50%, -50%);
+  animation: spin 5s linear infinite;
 }
 .rotate-image3 {
-    position: absolute;
-    bottom: 20px;
-    right: 320px;
-    transform: translate(-50%, -50%);
-    animation: spin 4s linear infinite;
+  position: absolute;
+  bottom: 20px;
+  right: 320px;
+  transform: translate(-50%, -50%);
+  animation: spin 4s linear infinite;
 }
 .profile-left-info {
-    border: 3px rgba(29, 29, 29, 1) solid;
-    border-radius: 30px;
-    .icon {
-        padding-right: 8px;
-    }
+  border: 3px rgba(29, 29, 29, 1) solid;
+  border-radius: 30px;
+  .icon {
+    padding-right: 8px;
+  }
 }
 
 .list {
-    flex: 2;
-    display: flex;
+  flex: 2;
+  display: flex;
 
-    gap: 20px;
-    justify-content: center;
+  gap: 20px;
+  justify-content: center;
 }
 .port {
-    flex-basis: calc(50% - 40px);
-    padding: 10px;
-    text-align: center;
+  flex-basis: calc(50% - 40px);
+  padding: 10px;
+  text-align: center;
 }
 .box {
-    display: block;
-    text-decoration: none;
-    color: $color_4;
+  display: block;
+  text-decoration: none;
+  color: $color_4;
 }
 .thumbnail {
-    img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto 10px;
-        border-radius: 10px;
-        border: 3px solid $color_1;
-    }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 10px;
+    border: 3px solid $color_1;
+  }
 }
 .title {
-    font-size:20px;
-    font-weight: bold;
-    margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 .text {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .profile {
-    display: flex;
-    justify-content: space-between;
-    gap: 24px;
-    .col1 {
-        width: 25%;
-        .profile-left-bottom {
-            padding: 20px 20px;
-        }
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  .col1 {
+    width: 25%;
+    .profile-left-bottom {
+      padding: 20px 20px;
     }
-    .col2 {
-        width: 35%;
-        .course {
-            padding: 16px 24px;
-            margin-bottom: 20px;
-        }
-        .certificate {
-            padding: 16px 24px;
-            margin-bottom: 20px;
-        }
+  }
+  .col2 {
+    width: 35%;
+    .course {
+      padding: 16px 24px;
+      margin-bottom: 20px;
     }
-    .col3 {
-        width: 40%;
-        .work {
-            padding: 16px 24px;
-            margin-bottom: 20px;
-        }
-
-        .education {
-            padding: 16px 24px;
-            margin-bottom: 20px;
-        }
+    .certificate {
+      padding: 16px 24px;
+      margin-bottom: 20px;
+    }
+  }
+  .col3 {
+    width: 40%;
+    .work {
+      padding: 16px 24px;
+      margin-bottom: 20px;
     }
 
-    .profile-bg {
-        overflow: hidden;
-        background-color: $background-color_1;
-        padding: 20px;
-        margin-bottom: 20px;
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    .education {
+      padding: 16px 24px;
+      margin-bottom: 20px;
     }
+  }
+
+  .profile-bg {
+    overflow: hidden;
+    background-color: $background-color_1;
+    padding: 20px;
+    margin-bottom: 20px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
 
 .profile-depth2 li {
-    padding-bottom: 16px; /* 내부 패딩 추가 */
+  padding-bottom: 16px; /* 내부 패딩 추가 */
 }
 .border-box {
-    border: 3px solid rgba(29, 29, 29, 1);
-    border-radius: 1.2rem;
-    background: rgb(243, 243, 243);
+  border: 3px solid rgba(29, 29, 29, 1);
+  border-radius: 1.2rem;
+  background: rgb(243, 243, 243);
 }
 .border-box2 {
-    border: 3px solid rgba(29, 29, 29, 1);
-    border-radius: 1.2rem;
-    background: rgb(249, 255, 166);
+  border: 3px solid rgba(29, 29, 29, 1);
+  border-radius: 1.2rem;
+  background: rgb(249, 255, 166);
 }
 
 .col {
-    .name {
-        font-size: 1.2rem;
-        font-weight: 600;
-        padding-top: 20px;
-    }
-    .date {
-        font-size: 0.8rem;
-        font-weight: 600;
-        color: $color_5;
-    }
-    .content {
-        font-size: 1rem;
-        font-weight: 600;
-        color: $color_2;
-        padding: 16px 0px;
-    }
+  .name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-top: 20px;
+  }
+  .date {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: $color_5;
+  }
+  .content {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $color_2;
+    padding: 16px 0px;
+  }
 }
 
 h4 {
-    width: fit-content;
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: rgba(250, 250, 250, 1);
-    background-color: $background-color_2;
-    border: 3px solid $color_1;
-    border-radius: 10px;
-    padding: 4px 16px;
-    margin-bottom: 16px;
+  width: fit-content;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: rgba(250, 250, 250, 1);
+  background-color: $background-color_2;
+  border: 3px solid $color_1;
+  border-radius: 10px;
+  padding: 4px 16px;
+  margin-bottom: 16px;
 }
 
 .hi {
-    font-size: 1.5rem;
-    font-weight: 800;
-    font-family: 'Cafe24Ohsquare';
-    padding: 16px;
-    margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-family: "Cafe24Ohsquare";
+  padding: 16px;
+  margin-bottom: 20px;
 }
 
 // slide3
 
 #portfoliolist {
-    .port-title {
-        padding-bottom: 40px;
-        font-weight: 900;
-        font-size: 1.8rem;
-    }
+  .port-title {
+    padding-bottom: 40px;
+    font-weight: 900;
+    font-size: 1.8rem;
+  }
+  .li {
+    height: 280px;
+  }
 }
 
+.portfolio_wrap {
+  display: flex;
+  position: relative;
+  width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+
+  .port-img {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+
+    .imges-wrap-recl {
+      position: relative;
+      top: 20px;
+      left: 280px;
+      width: 42%;
+      height: 75%;
+      border-radius: 30px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+      &:hover .imgs {
+        background-position: bottom;
+      }
+
+      .imgs {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        background-position: top;
+        transition: all 3s;
+      }
+
+      .recl {
+        background: url("../images/recl-main.png") no-repeat 0 0;
+        background-size: cover;
+      }
+    }
+  }
+}
+
+.port-texts {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  color: #ffffff;
+
+  .text-info {
+    width: 100%;
+    height: 100%;
+
+    .text-head {
+      position: absolute;
+      top: 18%;
+      left: 0;
+
+      .pf-text {
+        padding-bottom: 15px;
+
+        span {
+          font-size: 18px;
+          font-weight: 200;
+        }
+      }
+
+      .pf-logo {
+        width: 75%;
+        margin-bottom: 10px;
+
+        img {
+          width: 30%;
+          height: 100%;
+          -o-object-fit: cover;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .pf-info {
+      position: absolute;
+      top: 33%;
+      left: 0;
+    }
+  }
+
+  .pf-info-pfi1 {
+    padding: 0;
+    position: absolute;
+    top: 33%;
+    left: 0;
+  }
+}
+
+/* .port-texts .ti1 {
+    color: #000000;
+  }
+  .port-texts .ti2 {
+    color: #000000;
+  } */
+
+.pf-text-pft1 .type {
+  font-size: 1rem;
+}
+
+.text-head .pf-logo-pfl1 img {
+  width: 30%;
+}
+
+.port-texts .text-info {
+  .pf-info li {
+    margin-bottom: 10px;
+
+    .pf_info-title {
+      display: inline-block;
+      width: 150px;
+      font-weight: 700;
+    }
+
+    .pf_info-info {
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+
+  .page-info {
+    position: absolute;
+    top: 55%;
+    left: 0;
+
+    p {
+      width: 80%;
+      opacity: 0.9;
+      font-size: 1rem;
+      color: rgb(255, 255, 255);
+      text-align: left;
+    }
+  }
+
+  .pf-info-pfi1 {
+    position: absolute;
+    top: 33%;
+    left: 0;
+
+    li {
+      margin-bottom: 10px;
+
+      .pf_info-title {
+        display: inline-block;
+        width: 150px;
+        font-weight: 700;
+      }
+
+      .pf_info-info {
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+
+    .tool img {
+      position: absolute;
+      width: 10%;
+      height: 26%;
+      top: 35px;
+      right: 115px;
+    }
+  }
+
+  .page-info {
+    position: absolute;
+    top: 55%;
+    left: 0;
+
+    p {
+      width: 90%;
+      opacity: 0.9;
+    }
+  }
+}
+
+/* 갖고옴 */
+
+.pfb1 {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  display: flex;
+  gap: 10px;
+
+  .but {
+    position: relative;
+    width: 6vw;
+    height: 50px;
+    color: #000000;
+    border: 1px solid #000000;
+
+    &:hover {
+      text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      transition: 0.5s outline-color, 0.5s outline, 0.5s transform;
+      transition-timing-function: cubic-bezier(0.2, 0.8, 0.25, 0.8);
+      transform: scale3d(1.1, 1.3, 0);
+      outline: 0px solid;
+      outline-color: rgba(255, 255, 255, 0.05);
+      outline-offset: -10px;
+    }
+
+    &:hover::after {
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      transform: scale(1);
+      outline: 1px solid;
+      outline-color: rgba(255, 255, 255, 0.6);
+      outline-offset: 10px;
+      transition: 0.5s outline-offset cubic-bezier(0.2, 0.8, 0.25, 0.8),
+        0.5s outline-color cubic-bezier(0.2, 0.8, 0.25, 0.8),
+        0.5s outline cubic-bezier(0.2, 0.8, 0.25, 0.8);
+    }
+  }
+}
+
+.pfb2-recl {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  display: flex;
+  gap: 30px;
+
+  .but {
+    background-color: rgb(244, 253, 255);
+    position: relative;
+    width: 5.5vw;
+    height: 50px;
+    font-size: 1rem;
+    color: #000000;
+    border: 2px solid rgb(44, 198, 189);
+    border-radius: 8px;
+
+    &:hover {
+      text-shadow: 0 0 20px rgba(44, 198, 189, 0.5);
+      box-shadow: inset 0 0 20px rgba(44, 198, 189, 0.5),
+        0 0 20px rgba(0, 102, 255, 0.2);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      transition: 0.5s outline-color, 0.5s outline, 0.5s transform;
+      transition-timing-function: cubic-bezier(0.2, 0.8, 0.25, 0.8);
+      transform: scale3d(1.1, 1.3, 0);
+      outline: 0px solid;
+      outline-color: rgba(255, 255, 255, 0.05);
+      outline-offset: -10px;
+    }
+
+    &:hover::after {
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      transform: scale(1);
+      outline: 1px solid;
+      outline-color: rgba(255, 255, 255, 0.6);
+      outline-offset: 10px;
+      transition: 0.5s outline-offset cubic-bezier(0.2, 0.8, 0.25, 0.8),
+        0.5s outline-color cubic-bezier(0.2, 0.8, 0.25, 0.8),
+        0.5s outline cubic-bezier(0.2, 0.8, 0.25, 0.8);
+    }
+  }
+}
+
+/* 슬라이드5 slide5 스팩 */
 
 .portfolio_wrap {
+  display: flex;
+  position: relative;
+  width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+
+  .port-img {
     display: flex;
-    position: relative;
-    width: 1440px;
-    height: 100vh;
-    margin: 0 auto;
-    overflow: hidden;
-    justify-content: space-between;
     align-items: center;
-  
-    .port-img {
-      display: flex;
-      align-items: center;
-      width: 60%;
-      height: 100%;
-  
-      .imges-wrap-recl {
-        position: relative;
-        top: 20px;
-        left: 280px;
-        width: 42%;
-        height: 75%;
+    width: 60%;
+    height: 100%;
+
+    .imges-wrap {
+      width: 90%;
+      height: 80%;
+      border-radius: 30px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+      &:hover .imgs {
+        background-position: bottom;
+      }
+
+      .imgs {
+        width: 100%;
+        height: 100%;
         border-radius: 30px;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  
-        &:hover .imgs {
-          background-position: bottom;
-        }
-  
-        .imgs {
-          width: 100%;
-          height: 100%;
-          border-radius: 30px;
-          background-position: top;
-          transition: all 3s;
-        }
-  
-        .recl {
-          background: url("../images/recl-main.png") no-repeat 0 0;
-          background-size: cover;
-        }
+        background-position: top;
+        transition: all 5s;
+      }
+
+      .recl {
+        background: url("../images/스팩폴리오웹.png") no-repeat 0 0;
+        background-size: cover;
       }
     }
   }
-  
-  .port-texts {
-    position: relative;
-    width: 40%;
+}
+
+.port-texts {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  color: #ffffff;
+
+  .text-info {
+    width: 100%;
     height: 100%;
-    color: #ffffff;
-  
-    .text-info {
-      width: 100%;
-      height: 100%;
-  
-      .text-head {
-        position: absolute;
-        top: 18%;
-        left: 0;
-  
-        .pf-text {
-          padding-bottom: 15px;
-  
-          span {
-            font-size: 18px;
-            font-weight: 200;
-          }
-        }
-  
-        .pf-logo {
-          width: 75%;
-          margin-bottom: 10px;
-  
-          img {
-            width: 30%;
-            height: 100%;
-            -o-object-fit: cover;
-            object-fit: cover;
-          }
+
+    .text-head {
+      position: absolute;
+      top: 18%;
+      left: 0;
+
+      .pf-text {
+        padding-bottom: 15px;
+
+        span {
+          font-size: 18px;
+          font-weight: 200;
         }
       }
-  
-      .pf-info {
-        position: absolute;
-        top: 33%;
-        left: 0;
+
+      .pf-logo {
+        width: 75%;
+        margin-bottom: 10px;
+
+        img {
+          width: 30%;
+          height: 100%;
+          -o-object-fit: cover;
+          object-fit: cover;
+        }
       }
     }
-  
-    .pf-info-pfi1 {
-      padding: 0;
+
+    .pf-info {
       position: absolute;
       top: 33%;
       left: 0;
     }
   }
-  
-  /* .port-texts .ti1 {
+
+  .pf-info-pfi1 {
+    padding: 0;
+    position: absolute;
+    top: 33%;
+    left: 0;
+  }
+}
+
+/* .port-texts .ti1 {
     color: #000000;
   }
   .port-texts .ti2 {
     color: #000000;
   } */
-  
-  .pf-text-pft1 .type {
-    font-size: 1rem;
+
+.pf-text-pft1 .type {
+  font-size: 1rem;
+}
+
+.port-texts .text-info {
+  .pf-info li {
+    margin-bottom: 10px;
+
+    .pf_info-title {
+      display: inline-block;
+      width: 150px;
+      font-weight: 700;
+    }
+
+    .pf_info-info {
+      font-size: 16px;
+      font-weight: 300;
+    }
   }
-  
-  .text-head .pf-logo-pfl1 img {
+
+  .page-info {
+    position: absolute;
+    top: 55%;
+    left: 0;
+
+    p {
+      width: 80%;
+      opacity: 0.9;
+      font-size: 1rem;
+      color: rgb(255, 255, 255);
+      text-align: left;
+    }
+  }
+
+  .pf-info-pfi1 {
+    position: absolute;
+    top: 33%;
+    left: 0;
+
+    li {
+      margin-bottom: 10px;
+
+      .pf_info-title {
+        display: inline-block;
+        width: 150px;
+        font-weight: 700;
+      }
+
+      .pf_info-info {
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+
+    .tool img {
+      position: absolute;
+      width: 10%;
+      height: 26%;
+      top: 35px;
+      right: 115px;
+    }
+  }
+
+  .page-info {
+    position: absolute;
+    top: 55%;
+    left: 0;
+
+    p {
+      width: 90%;
+      opacity: 0.9;
+    }
+  }
+}
+
+/* 갖고옴 */
+
+.pfb1 {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  display: flex;
+  gap: 10px;
+
+  .but {
+    position: relative;
+    width: 6vw;
+    height: 50px;
+    color: #000000;
+    border: 1px solid #000000;
+
+    &:hover {
+      text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      transition: 0.5s outline-color, 0.5s outline, 0.5s transform;
+      transition-timing-function: cubic-bezier(0.2, 0.8, 0.25, 0.8);
+      transform: scale3d(1.1, 1.3, 0);
+      outline: 0px solid;
+      outline-color: rgba(255, 255, 255, 0.05);
+      outline-offset: -10px;
+    }
+
+    &:hover::after {
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      transform: scale(1);
+      outline: 1px solid;
+      outline-color: rgba(255, 255, 255, 0.6);
+      outline-offset: 10px;
+      transition: 0.5s outline-offset cubic-bezier(0.2, 0.8, 0.25, 0.8),
+        0.5s outline-color cubic-bezier(0.2, 0.8, 0.25, 0.8),
+        0.5s outline cubic-bezier(0.2, 0.8, 0.25, 0.8);
+    }
+  }
+}
+
+.pfb2 {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  display: flex;
+  gap: 30px;
+
+  .but {
+    background-color: rgb(244, 253, 255);
+    position: relative;
+    width: 5.5vw;
+    height: 50px;
+    font-size: 1rem;
+    color: #000000;
+    border: 2px solid rgb(121, 163, 240);
+    border-radius: 8px;
+
+    &:hover {
+      text-shadow: 0 0 20px rgba(121, 163, 240, 0.5);
+      box-shadow: inset 0 0 20px rgba(121, 163, 240, 0.5),
+        0 0 20px rgba(0, 102, 255, 0.2);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      transition: 0.5s outline-color, 0.5s outline, 0.5s transform;
+      transition-timing-function: cubic-bezier(0.2, 0.8, 0.25, 0.8);
+      transform: scale3d(1.1, 1.3, 0);
+      outline: 0px solid;
+      outline-color: rgba(255, 255, 255, 0.05);
+      outline-offset: -10px;
+    }
+
+    &:hover::after {
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      transform: scale(1);
+      outline: 1px solid;
+      outline-color: rgba(255, 255, 255, 0.6);
+      outline-offset: 10px;
+      transition: 0.5s outline-offset cubic-bezier(0.2, 0.8, 0.25, 0.8),
+        0.5s outline-color cubic-bezier(0.2, 0.8, 0.25, 0.8),
+        0.5s outline cubic-bezier(0.2, 0.8, 0.25, 0.8);
+    }
+  }
+}
+
+/* 슬라이드6 slide6 유데미 */
+
+.portfolio_wrap {
+  display: flex;
+  position: relative;
+  width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+
+  .port-img {
+    display: flex;
+    align-items: center;
+    width: 58%;
+    height: 100%;
+
+    .imges-wrap-uc {
+      position: relative;
+      top: 20px;
+      left: 280px;
+      width: 42%;
+      height: 75%;
+      border-radius: 30px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+      &:hover .imgs {
+        background-position: bottom;
+      }
+
+      .imgs {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        background-position: top;
+        transition: all 9s;
+      }
+
+      .uc {
+        background: url("../images/udemy-main.png") no-repeat 0 0;
+        background-size: cover;
+      }
+    }
+  }
+}
+
+.port-texts {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  color: #ffffff;
+
+  .text-info {
+    width: 100%;
+    height: 100%;
+
+    .text-head {
+      position: absolute;
+      top: 18%;
+      left: 0;
+
+      .pf-text {
+        padding-bottom: 15px;
+
+        span {
+          font-size: 18px;
+          font-weight: 200;
+        }
+      }
+
+      .pf-logo {
+        width: 75%;
+        margin-bottom: 10px;
+
+        img {
+          width: 30%;
+          height: 100%;
+          -o-object-fit: cover;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .pf-info {
+      position: absolute;
+      top: 33%;
+      left: 0;
+    }
+  }
+
+  .pf-info-pfi1 {
+    padding: 0;
+    position: absolute;
+    top: 33%;
+    left: 0;
+  }
+}
+
+.pf-text-pft1 .type {
+  font-size: 1rem;
+}
+
+.text-head .pf-logo-pfl1-uc img {
+  width: 40%;
+}
+
+.port-texts .text-info {
+  .pf-info li {
+    margin-bottom: 10px;
+
+    .pf_info-title {
+      display: inline-block;
+      width: 150px;
+      font-weight: 700;
+    }
+
+    .pf_info-info {
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+
+  .page-info {
+    position: absolute;
+    top: 55%;
+    left: 0;
+
+    p {
+      width: 80%;
+      opacity: 0.9;
+      font-size: 1rem;
+      color: rgb(255, 255, 255);
+      text-align: left;
+    }
+  }
+
+  .pf-info-pfi1 {
+    position: absolute;
+    top: 33%;
+    left: 0;
+
+    li {
+      margin-bottom: 10px;
+
+      .pf_info-title {
+        display: inline-block;
+        width: 150px;
+        font-weight: 700;
+      }
+
+      .pf_info-info {
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+
+    .tool img {
+      position: absolute;
+      width: 10%;
+      height: 26%;
+      top: 35px;
+      right: 115px;
+    }
+  }
+
+  .page-info {
+    position: absolute;
+    top: 55%;
+    left: 0;
+
+    p {
+      width: 90%;
+      opacity: 0.9;
+    }
+  }
+}
+
+/* 갖고옴 */
+
+.pfb1 {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  display: flex;
+  gap: 10px;
+
+  .but {
+    position: relative;
+    width: 6vw;
+    height: 50px;
+    color: #000000;
+    border: 1px solid #000000;
+
+    &:hover {
+      text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      transition: 0.5s outline-color, 0.5s outline, 0.5s transform;
+      transition-timing-function: cubic-bezier(0.2, 0.8, 0.25, 0.8);
+      transform: scale3d(1.1, 1.3, 0);
+      outline: 0px solid;
+      outline-color: rgba(255, 255, 255, 0.05);
+      outline-offset: -10px;
+    }
+
+    &:hover::after {
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      transform: scale(1);
+      outline: 1px solid;
+      outline-color: rgba(255, 255, 255, 0.6);
+      outline-offset: 10px;
+      transition: 0.5s outline-offset cubic-bezier(0.2, 0.8, 0.25, 0.8),
+        0.5s outline-color cubic-bezier(0.2, 0.8, 0.25, 0.8),
+        0.5s outline cubic-bezier(0.2, 0.8, 0.25, 0.8);
+    }
+  }
+}
+
+.pfb2-uc {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  display: flex;
+  gap: 30px;
+
+  .but {
+    background-color: rgb(244, 253, 255);
+    position: relative;
+    width: 5.5vw;
+    height: 50px;
+    font-size: 1rem;
+    color: #000000;
+    border: 2px solid rgb(181, 91, 241);
+    border-radius: 8px;
+
+    &:hover {
+      text-shadow: 0 0 20px rgba(181, 91, 241, 0.5);
+      box-shadow: inset 0 0 20px rgba(181, 91, 241, 0.5),
+        0 0 20px rgba(0, 102, 255, 0.2);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      transition: 0.5s outline-color, 0.5s outline, 0.5s transform;
+      transition-timing-function: cubic-bezier(0.2, 0.8, 0.25, 0.8);
+      transform: scale3d(1.1, 1.3, 0);
+      outline: 0px solid;
+      outline-color: rgba(255, 255, 255, 0.05);
+      outline-offset: -10px;
+    }
+
+    &:hover::after {
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      transform: scale(1);
+      outline: 1px solid;
+      outline-color: rgba(255, 255, 255, 0.6);
+      outline-offset: 10px;
+      transition: 0.5s outline-offset cubic-bezier(0.2, 0.8, 0.25, 0.8),
+        0.5s outline-color cubic-bezier(0.2, 0.8, 0.25, 0.8),
+        0.5s outline cubic-bezier(0.2, 0.8, 0.25, 0.8);
+    }
+  }
+}
+
+/* slide 7 슬라이드7 캐치클라우드 */
+
+.portfolio_wrap {
+  display: flex;
+  position: relative;
+  width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+
+  .port-img {
+    display: flex;
+    align-items: center;
+    width: 58%;
+    height: 100%;
+
+    .imges-wrap-cc {
+      position: relative;
+      top: 20px;
+      left: 280px;
+      width: 42%;
+      height: 75%;
+      border-radius: 30px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+      &:hover .imgs {
+        background-position: bottom;
+      }
+
+      .imgs {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        background-position: top;
+        transition: all 9s;
+      }
+
+      .cc {
+        background: url("../images/cc-main.png") no-repeat 0 0;
+        background-size: cover;
+      }
+    }
+  }
+}
+
+.text-head .pf-logo-pfl1-cc img {
+  width: 60%;
+}
+
+.pfb2-cc {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  display: flex;
+  gap: 30px;
+
+  .but {
+    background-color: rgb(244, 253, 255);
+    position: relative;
+    width: 5.5vw;
+    height: 50px;
+    font-size: 1rem;
+    color: #000000;
+    border: 2px solid rgb(44, 102, 246);
+    border-radius: 8px;
+
+    &:hover {
+      text-shadow: 0 0 20px rgba(44, 102, 246, 0.5);
+      box-shadow: inset 0 0 20px rgba(44, 102, 246, 0.5),
+        0 0 20px rgba(0, 102, 255, 0.2);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      transition: 0.5s outline-color, 0.5s outline, 0.5s transform;
+      transition-timing-function: cubic-bezier(0.2, 0.8, 0.25, 0.8);
+      transform: scale3d(1.1, 1.3, 0);
+      outline: 0px solid;
+      outline-color: rgba(255, 255, 255, 0.05);
+      outline-offset: -10px;
+    }
+
+    &:hover::after {
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      transform: scale(1);
+      outline: 1px solid;
+      outline-color: rgba(255, 255, 255, 0.6);
+      outline-offset: 10px;
+      transition: 0.5s outline-offset cubic-bezier(0.2, 0.8, 0.25, 0.8),
+        0.5s outline-color cubic-bezier(0.2, 0.8, 0.25, 0.8),
+        0.5s outline cubic-bezier(0.2, 0.8, 0.25, 0.8);
+    }
+  }
+}
+
+/* slide8 슬라이드8 스와로브스키 */
+
+.portfolio_wrap {
+  display: flex;
+  position: relative;
+  width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+
+  .port-img {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+
+    .imges-wrap-sw {
+      width: 90%;
+      height: 80%;
+      border-radius: 30px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+      &:hover .imgs {
+        background-position: bottom;
+      }
+
+      .imgs {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        background-position: top;
+        transition: all 10s;
+      }
+
+      .sw {
+        background: url("../images/Swarovski-main.png") no-repeat 0 0;
+        background-size: cover;
+      }
+    }
+  }
+}
+
+.text-head .pf-logo-pfl1-sw img {
+  width: 45%;
+}
+
+.pfb2-sw {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  display: flex;
+  gap: 30px;
+
+  .but {
+    background-color: rgb(244, 253, 255);
+    position: relative;
+    width: 5.5vw;
+    height: 50px;
+    font-size: 1rem;
+    color: #000000;
+    border: 2px solid rgb(44, 198, 189);
+    border-radius: 8px;
+
+    &:hover {
+      text-shadow: 0 0 20px rgba(44, 198, 189, 0.5);
+      box-shadow: inset 0 0 20px rgba(44, 198, 189, 0.5),
+        0 0 20px rgba(0, 102, 255, 0.2);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      transition: 0.5s outline-color, 0.5s outline, 0.5s transform;
+      transition-timing-function: cubic-bezier(0.2, 0.8, 0.25, 0.8);
+      transform: scale3d(1.1, 1.3, 0);
+      outline: 0px solid;
+      outline-color: rgba(255, 255, 255, 0.05);
+      outline-offset: -10px;
+    }
+
+    &:hover::after {
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      transform: scale(1);
+      outline: 1px solid;
+      outline-color: rgba(255, 255, 255, 0.6);
+      outline-offset: 10px;
+      transition: 0.5s outline-offset cubic-bezier(0.2, 0.8, 0.25, 0.8),
+        0.5s outline-color cubic-bezier(0.2, 0.8, 0.25, 0.8),
+        0.5s outline cubic-bezier(0.2, 0.8, 0.25, 0.8);
+    }
+  }
+}
+// -------------------
+
+.portfolio_wrap {
+  width: 100%;
+  padding: 0 5%;
+}
+.port-images .macbook {
+  transform: scale(0.75);
+}
+.port-images .iphone {
+  transform: scale(0.75);
+}
+.port-images .ipad {
+  transform: scale(0.75);
+  top: 40%;
+}
+.port-texts .text-info .pf-info {
+  top: 35%;
+}
+
+.pfb1,
+.pfb2 {
+  top: 80%;
+}
+.pfb1 .but {
+  width: 105px;
+  font-size: 15px;
+}
+.sec2 .bubble-wrap .bpb {
+  width: 500px;
+}
+.sec5 {
+  .port-images .macbook {
+    top: 19%;
+  }
+}
+.sec3 {
+  .port-images .iphone {
+    left: 80%;
+  }
+}
+.port-texts .text-info .text-head .pf-text span {
+  font-size: 16px;
+}
+.port-texts .text-info .pf-info li .pf_info-info {
+  font-size: 15px;
+}
+.port-texts .text-info .page-info p {
+  font-size: 14px;
+}
+.port-texts .text-info .text-head .pf-logo {
+  width: 70%;
+}
+
+@media screen and (max-width: 1280px) {
+  .sec2 .about-wrap {
+    max-width: none;
+    padding: 0% 5%;
+  }
+  .sec2 .bubble-wrap .bpb {
+    width: 100%;
+  }
+  .sec2 .about-txt-wrap {
+    width: 46%;
+  }
+  .portfolio_wrap {
+    width: auto;
+    height: calc(100% - 85px);
+    padding: 0 5%;
+  }
+  .port-texts {
+    position: relative;
+  }
+  .port-texts .text-info .text-head .pf-text span {
+    font-size: 16px;
+  }
+  .port-texts .text-info .pf-info li .pf_info-info {
+    font-size: 15px;
+  }
+  .port-texts .text-info .page-info {
+    top: 58%;
+  }
+  .port-texts .text-info .page-info p {
+    font-size: 14px;
+  }
+
+  .pfb1,
+  .pfb2 {
+    top: 79%;
+  }
+  .pfb1 .but {
+    width: 100px;
+    font-size: 14px;
+  }
+  #fp-nav ul li:hover .fp-tooltip,
+  #fp-nav.fp-show-active a.active + .fp-tooltip {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .sec1 #blobSvg {
+    transform: scale(0.75);
+  }
+  .sec1 .square {
+    font-size: 85px;
+  }
+
+  .sec2 .about-txt-wrap .abtxt .about-me {
+    font-size: 25px;
+  }
+  .sec2 .about-txt-wrap .abtxt .about-intro {
+    font-size: 14px;
+  }
+  .sec2 .about-txt-wrap {
+    width: 51%;
+  }
+  .sec4 {
+    .port-images .macbook {
+      transform: scale(0.6);
+      top: 20%;
+      left: 30%;
+    }
+    .port-images .iphone {
+      transform: scale(0.6);
+    }
+  }
+  .sec2 .about-wrap {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .sec2 .bubble-wrap .bpb {
+    width: 80%;
+    top: 40%;
+  }
+  .sec2 .bubble-wrap .blob-bg {
+    top: 33%;
+  }
+  .sec2 .bubble-wrap {
+    width: 50%;
+    height: 40%;
+  }
+  .port-texts .text-info .page-info p {
+    font-size: 14px;
+    width: 100%;
+  }
+  .portfolio_wrap {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .portfolio_wrap .port-img .imges-wrap .kt4 {
+    background: url(../../images/main/KT4-t.jpg) no-repeat 0 0;
+    background-size: cover;
+  }
+  .portfolio_wrap .port-img {
+    width: 100%;
+    height: 60%;
+    justify-content: center;
+  }
+  .port-texts {
+    width: 100%;
+    height: 35%;
+  }
+  .portfolio_wrap .port-img .imges-wrap {
+    height: 80%;
+  }
+  .port-texts .text-info .text-head {
+    top: 0;
+  }
+  .port-texts .text-info .pf-info {
+    top: 25%;
+  }
+  .pfb1,
+  .pfb2 {
+    width: 100%;
+  }
+  .pfb2 .but {
     width: 30%;
   }
-  
-  .port-texts .text-info {
-    .pf-info li {
-      margin-bottom: 10px;
-  
-      .pf_info-title {
-        display: inline-block;
-        width: 150px;
-        font-weight: 700;
-      }
-  
-      .pf_info-info {
-        font-size: 16px;
-        font-weight: 300;
-      }
-    }
-  
-    .page-info {
-      position: absolute;
-      top: 55%;
-      left: 0;
-  
-      p {
-        width: 80%;
-        opacity: 0.9;
-        font-size: 1rem;
-        color: rgb(255, 255, 255);
-        text-align: left;
-      }
-    }
-  
-    .pf-info-pfi1 {
-      position: absolute;
-      top: 33%;
-      left: 0;
-  
-      li {
-        margin-bottom: 10px;
-  
-        .pf_info-title {
-          display: inline-block;
-          width: 150px;
-          font-weight: 700;
-        }
-  
-        .pf_info-info {
-          font-size: 16px;
-          font-weight: 300;
-        }
-      }
-  
-      .tool img {
-        position: absolute;
-        width: 10%;
-        height: 26%;
-        top: 35px;
-        right: 115px;
-      }
-    }
-  
-    .page-info {
-      position: absolute;
-      top: 55%;
-      left: 0;
-  
-      p {
-        width: 90%;
-        opacity: 0.9;
-      }
-    }
+  .pfb1 .but {
+    width: 24%;
   }
-  
-  /* 갖고옴 */
-  
-  .pfb1 {
-    position: absolute;
-    top: 75%;
-    left: 0;
-    display: flex;
-    gap: 10px;
-  
-    .but {
-      position: relative;
-      width: 6vw;
-      height: 50px;
-      color: #000000;
-      border: 1px solid #000000;
-  
-      &:hover {
-        text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.2);
-      }
-  
-      &::after {
-        position: absolute;
-        content: "";
-        top: -10px;
-        left: -10px;
-        right: -10px;
-        bottom: -10px;
-        transition: 0.5s outline-color, 0.5s outline, 0.5s transform;
-        transition-timing-function: cubic-bezier(0.2, 0.8, 0.25, 0.8);
-        transform: scale3d(1.1, 1.3, 0);
-        outline: 0px solid;
-        outline-color: rgba(255, 255, 255, 0.05);
-        outline-offset: -10px;
-      }
-  
-      &:hover::after {
-        top: 10px;
-        left: 10px;
-        right: 10px;
-        bottom: 10px;
-        transform: scale(1);
-        outline: 1px solid;
-        outline-color: rgba(255, 255, 255, 0.6);
-        outline-offset: 10px;
-        transition: 0.5s outline-offset cubic-bezier(0.2, 0.8, 0.25, 0.8), 0.5s outline-color cubic-bezier(0.2, 0.8, 0.25, 0.8), 0.5s outline cubic-bezier(0.2, 0.8, 0.25, 0.8);
-      }
-    }
+  .page-info {
+    display: none;
   }
-  
-  .pfb2-recl {
-    position: absolute;
-    top: 75%;
-    left: 0;
-    display: flex;
-    gap: 30px;
-  
-    .but {
-      background-color: rgb(244, 253, 255);
-      position: relative;
-      width: 5.5vw;
-      height: 50px;
-      font-size: 1rem;
-      color: #000000;
-      border: 2px solid rgb(44, 198, 189);
-      border-radius: 8px;
-  
-      &:hover {
-        text-shadow: 0 0 20px rgba(44, 198, 189, 0.5);
-        box-shadow: inset 0 0 20px rgba(44, 198, 189, 0.5), 0 0 20px rgba(0, 102, 255, 0.2);
-      }
-  
-      &::after {
-        position: absolute;
-        content: "";
-        top: -10px;
-        left: -10px;
-        right: -10px;
-        bottom: -10px;
-        transition: 0.5s outline-color, 0.5s outline, 0.5s transform;
-        transition-timing-function: cubic-bezier(0.2, 0.8, 0.25, 0.8);
-        transform: scale3d(1.1, 1.3, 0);
-        outline: 0px solid;
-        outline-color: rgba(255, 255, 255, 0.05);
-        outline-offset: -10px;
-      }
-  
-      &:hover::after {
-        top: 10px;
-        left: 10px;
-        right: 10px;
-        bottom: 10px;
-        transform: scale(1);
-        outline: 1px solid;
-        outline-color: rgba(255, 255, 255, 0.6);
-        outline-offset: 10px;
-        transition: 0.5s outline-offset cubic-bezier(0.2, 0.8, 0.25, 0.8), 0.5s outline-color cubic-bezier(0.2, 0.8, 0.25, 0.8), 0.5s outline cubic-bezier(0.2, 0.8, 0.25, 0.8);
-      }
-    }
+  .port-texts .text-info .text-head .pf-text {
+    padding-bottom: 5px;
   }
-  
-  /* 슬라이드5 slide5 스팩 */
-  
-  .portfolio_wrap {
-    display: flex;
-    position: relative;
-    width: 1440px;
-    height: 100vh;
-    margin: 0 auto;
+  .port-texts .text-info .text-head .pf-logo {
+    width: 50%;
+  }
+  #fp-nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .depth1,
+  .depth2,
+  .depth4,
+  .depth5 {
+    display: none;
+  }
+  .sec1 #blobSvg {
+    transform: scale(0.8);
+  }
+  .sec1 .square {
+    font-size: 10vw;
+  }
+  #about {
     overflow: hidden;
-    justify-content: space-between;
-    align-items: center;
-  
-    .port-img {
-      display: flex;
-      align-items: center;
-      width: 60%;
-      height: 100%;
-  
-      .imges-wrap {
-        width: 90%;
-        height: 80%;
-        border-radius: 30px;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  
-        &:hover .imgs {
-          background-position: bottom;
-        }
-  
-        .imgs {
-          width: 100%;
-          height: 100%;
-          border-radius: 30px;
-          background-position: top;
-          transition: all 5s;
-        }
-  
-        .recl {
-          background: url("../images/스팩폴리오웹.png") no-repeat 0 0;
-          background-size: cover;
-        }
-      }
-    }
   }
-  
+  .sec2 .about-wrap {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .sec2 .bubble-wrap .bpb {
+    width: 130%;
+    top: 60%;
+  }
+  .sec2 .bubble-wrap .blob-bg {
+    top: 50%;
+  }
+  .sec2 .bubble-wrap {
+    width: 50%;
+    height: 40%;
+  }
+
+  .sec2 .about-txt-wrap {
+    width: 80%;
+    height: 25%;
+    margin-top: 50px;
+  }
+  .page-info {
+    display: none;
+  }
+  .portfolio_wrap {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .portfolio_wrap .port-img {
+    width: 100%;
+    height: 60%;
+    justify-content: center;
+  }
   .port-texts {
-    position: relative;
-    width: 40%;
-    height: 100%;
-    color: #ffffff;
-  
-    .text-info {
-      width: 100%;
-      height: 100%;
-  
-      .text-head {
-        position: absolute;
-        top: 18%;
-        left: 0;
-  
-        .pf-text {
-          padding-bottom: 15px;
-  
-          span {
-            font-size: 18px;
-            font-weight: 200;
-          }
-        }
-  
-        .pf-logo {
-          width: 75%;
-          margin-bottom: 10px;
-  
-          img {
-            width: 30%;
-            height: 100%;
-            -o-object-fit: cover;
-            object-fit: cover;
-          }
-        }
-      }
-  
-      .pf-info {
-        position: absolute;
-        top: 33%;
-        left: 0;
-      }
-    }
-  
-    .pf-info-pfi1 {
-      padding: 0;
-      position: absolute;
-      top: 33%;
-      left: 0;
-    }
+    width: 100%;
+    height: 35%;
   }
-  
-  /* .port-texts .ti1 {
-    color: #000000;
+  .portfolio_wrap .port-img .imges-wrap {
+    height: 80%;
   }
-  .port-texts .ti2 {
-    color: #000000;
-  } */
-  
-  .pf-text-pft1 .type {
-    font-size: 1rem;
+  .portfolio_wrap .port-img .imges-wrap:hover .imgs {
+    background-position: top;
   }
-  
-  .port-texts .text-info {
-    .pf-info li {
-      margin-bottom: 10px;
-  
-      .pf_info-title {
-        display: inline-block;
-        width: 150px;
-        font-weight: 700;
-      }
-  
-      .pf_info-info {
-        font-size: 16px;
-        font-weight: 300;
-      }
-    }
-  
-    .page-info {
-      position: absolute;
-      top: 55%;
-      left: 0;
-  
-      p {
-        width: 80%;
-        opacity: 0.9;
-        font-size: 1rem;
-        color: rgb(255, 255, 255);
-        text-align: left;
-      }
-    }
-  
-    .pf-info-pfi1 {
-      position: absolute;
-      top: 33%;
-      left: 0;
-  
-      li {
-        margin-bottom: 10px;
-  
-        .pf_info-title {
-          display: inline-block;
-          width: 150px;
-          font-weight: 700;
-        }
-  
-        .pf_info-info {
-          font-size: 16px;
-          font-weight: 300;
-        }
-      }
-  
-      .tool img {
-        position: absolute;
-        width: 10%;
-        height: 26%;
-        top: 35px;
-        right: 115px;
-      }
-    }
-  
-    .page-info {
-      position: absolute;
-      top: 55%;
-      left: 0;
-  
-      p {
-        width: 90%;
-        opacity: 0.9;
-      }
-    }
-  }
-  
-  /* 갖고옴 */
-  
-  .pfb1 {
-    position: absolute;
-    top: 75%;
+  .port-texts .text-info .text-head {
+    top: 0;
     left: 0;
-    display: flex;
-    gap: 10px;
-  
-    .but {
-      position: relative;
-      width: 6vw;
-      height: 50px;
-      color: #000000;
-      border: 1px solid #000000;
-  
-      &:hover {
-        text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.2);
-      }
-  
-      &::after {
-        position: absolute;
-        content: "";
-        top: -10px;
-        left: -10px;
-        right: -10px;
-        bottom: -10px;
-        transition: 0.5s outline-color, 0.5s outline, 0.5s transform;
-        transition-timing-function: cubic-bezier(0.2, 0.8, 0.25, 0.8);
-        transform: scale3d(1.1, 1.3, 0);
-        outline: 0px solid;
-        outline-color: rgba(255, 255, 255, 0.05);
-        outline-offset: -10px;
-      }
-  
-      &:hover::after {
-        top: 10px;
-        left: 10px;
-        right: 10px;
-        bottom: 10px;
-        transform: scale(1);
-        outline: 1px solid;
-        outline-color: rgba(255, 255, 255, 0.6);
-        outline-offset: 10px;
-        transition: 0.5s outline-offset cubic-bezier(0.2, 0.8, 0.25, 0.8), 0.5s outline-color cubic-bezier(0.2, 0.8, 0.25, 0.8), 0.5s outline cubic-bezier(0.2, 0.8, 0.25, 0.8);
-      }
-    }
   }
-  
+  .pfb1,
   .pfb2 {
-    position: absolute;
-    top: 75%;
-    left: 0;
-    display: flex;
-    gap: 30px;
-  
-    .but {
-      background-color: rgb(244, 253, 255);
-      position: relative;
-      width: 5.5vw;
-      height: 50px;
-      font-size: 1rem;
-      color: #000000;
-      border: 2px solid rgb(121, 163, 240);
-      border-radius: 8px;
-  
-      &:hover {
-        text-shadow: 0 0 20px rgba(121, 163, 240, 0.5);
-        box-shadow: inset 0 0 20px rgba(121, 163, 240, 0.5), 0 0 20px rgba(0, 102, 255, 0.2);
-      }
-  
-      &::after {
-        position: absolute;
-        content: "";
-        top: -10px;
-        left: -10px;
-        right: -10px;
-        bottom: -10px;
-        transition: 0.5s outline-color, 0.5s outline, 0.5s transform;
-        transition-timing-function: cubic-bezier(0.2, 0.8, 0.25, 0.8);
-        transform: scale3d(1.1, 1.3, 0);
-        outline: 0px solid;
-        outline-color: rgba(255, 255, 255, 0.05);
-        outline-offset: -10px;
-      }
-  
-      &:hover::after {
-        top: 10px;
-        left: 10px;
-        right: 10px;
-        bottom: 10px;
-        transform: scale(1);
-        outline: 1px solid;
-        outline-color: rgba(255, 255, 255, 0.6);
-        outline-offset: 10px;
-        transition: 0.5s outline-offset cubic-bezier(0.2, 0.8, 0.25, 0.8), 0.5s outline-color cubic-bezier(0.2, 0.8, 0.25, 0.8), 0.5s outline cubic-bezier(0.2, 0.8, 0.25, 0.8);
-      }
-    }
-  }
-  
-  /* 슬라이드6 slide6 유데미 */
-  
-  .portfolio_wrap {
-    display: flex;
-    position: relative;
-    width: 1440px;
-    height: 100vh;
-    margin: 0 auto;
-    overflow: hidden;
-    justify-content: space-between;
+    top: 10%;
+    left: 65%;
+    gap: 20px;
+    width: 30%;
+    flex-direction: column;
     align-items: center;
-  
-    .port-img {
-      display: flex;
-      align-items: center;
-      width: 58%;
-      height: 100%;
-  
-      .imges-wrap-uc {
-        position: relative;
-        top: 20px;
-        left: 280px;
-        width: 42%;
-        height: 75%;
-        border-radius: 30px;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  
-        &:hover .imgs {
-          background-position: bottom;
-        }
-  
-        .imgs {
-          width: 100%;
-          height: 100%;
-          border-radius: 30px;
-          background-position: top;
-          transition: all 9s;
-        }
-  
-        .uc {
-          background: url("../images/udemy-main.png") no-repeat 0 0;
-          background-size: cover;
-        }
-      }
-    }
   }
-  
-  .port-texts {
-    position: relative;
-    width: 40%;
-    height: 100%;
-    color: #ffffff;
-  
-    .text-info {
-      width: 100%;
-      height: 100%;
-  
-      .text-head {
-        position: absolute;
-        top: 18%;
-        left: 0;
-  
-        .pf-text {
-          padding-bottom: 15px;
-  
-          span {
-            font-size: 18px;
-            font-weight: 200;
-          }
-        }
-  
-        .pf-logo {
-          width: 75%;
-          margin-bottom: 10px;
-  
-          img {
-            width: 30%;
-            height: 100%;
-            -o-object-fit: cover;
-            object-fit: cover;
-          }
-        }
-      }
-  
-      .pf-info {
-        position: absolute;
-        top: 33%;
-        left: 0;
-      }
-    }
-  
-    .pf-info-pfi1 {
-      padding: 0;
-      position: absolute;
-      top: 33%;
-      left: 0;
-    }
+  .pfb1 .but {
+    width: 100%;
   }
-  
-  .pf-text-pft1 .type {
-    font-size: 1rem;
+  .pfb2 .but {
+    width: 100%;
   }
-  
-  .text-head .pf-logo-pfl1-uc img {
-    width: 40%;
+  .sec4 .pfb2 {
+    left: 66%;
   }
-  
+  .sec4 .pfb2 .but {
+    width: 90%;
+  }
   .port-texts .text-info {
-    .pf-info li {
-      margin-bottom: 10px;
-  
-      .pf_info-title {
-        display: inline-block;
-        width: 150px;
-        font-weight: 700;
-      }
-  
-      .pf_info-info {
-        font-size: 16px;
-        font-weight: 300;
-      }
-    }
-  
-    .page-info {
-      position: absolute;
-      top: 55%;
-      left: 0;
-  
-      p {
-        width: 80%;
-        opacity: 0.9;
-        font-size: 1rem;
-        color: rgb(255, 255, 255);
-        text-align: left;
-      }
-    }
-  
-    .pf-info-pfi1 {
-      position: absolute;
-      top: 33%;
-      left: 0;
-  
-      li {
-        margin-bottom: 10px;
-  
-        .pf_info-title {
-          display: inline-block;
-          width: 150px;
-          font-weight: 700;
-        }
-  
-        .pf_info-info {
-          font-size: 16px;
-          font-weight: 300;
-        }
-      }
-  
-      .tool img {
-        position: absolute;
-        width: 10%;
-        height: 26%;
-        top: 35px;
-        right: 115px;
-      }
-    }
-  
-    .page-info {
-      position: absolute;
-      top: 55%;
-      left: 0;
-  
-      p {
-        width: 90%;
-        opacity: 0.9;
-      }
-    }
-  }
-  
-  /* 갖고옴 */
-  
-  .pfb1 {
-    position: absolute;
-    top: 75%;
-    left: 0;
-    display: flex;
-    gap: 10px;
-  
-    .but {
-      position: relative;
-      width: 6vw;
-      height: 50px;
-      color: #000000;
-      border: 1px solid #000000;
-  
-      &:hover {
-        text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.2);
-      }
-  
-      &::after {
-        position: absolute;
-        content: "";
-        top: -10px;
-        left: -10px;
-        right: -10px;
-        bottom: -10px;
-        transition: 0.5s outline-color, 0.5s outline, 0.5s transform;
-        transition-timing-function: cubic-bezier(0.2, 0.8, 0.25, 0.8);
-        transform: scale3d(1.1, 1.3, 0);
-        outline: 0px solid;
-        outline-color: rgba(255, 255, 255, 0.05);
-        outline-offset: -10px;
-      }
-  
-      &:hover::after {
-        top: 10px;
-        left: 10px;
-        right: 10px;
-        bottom: 10px;
-        transform: scale(1);
-        outline: 1px solid;
-        outline-color: rgba(255, 255, 255, 0.6);
-        outline-offset: 10px;
-        transition: 0.5s outline-offset cubic-bezier(0.2, 0.8, 0.25, 0.8), 0.5s outline-color cubic-bezier(0.2, 0.8, 0.25, 0.8), 0.5s outline cubic-bezier(0.2, 0.8, 0.25, 0.8);
-      }
-    }
-  }
-  
-  .pfb2-uc {
-    position: absolute;
-    top: 75%;
-    left: 0;
-    display: flex;
-    gap: 30px;
-  
-    .but {
-      background-color: rgb(244, 253, 255);
-      position: relative;
-      width: 5.5vw;
-      height: 50px;
-      font-size: 1rem;
-      color: #000000;
-      border: 2px solid rgb(181, 91, 241);
-      border-radius: 8px;
-  
-      &:hover {
-        text-shadow: 0 0 20px rgba(181, 91, 241, 0.5);
-        box-shadow: inset 0 0 20px rgba(181, 91, 241, 0.5), 0 0 20px rgba(0, 102, 255, 0.2);
-      }
-  
-      &::after {
-        position: absolute;
-        content: "";
-        top: -10px;
-        left: -10px;
-        right: -10px;
-        bottom: -10px;
-        transition: 0.5s outline-color, 0.5s outline, 0.5s transform;
-        transition-timing-function: cubic-bezier(0.2, 0.8, 0.25, 0.8);
-        transform: scale3d(1.1, 1.3, 0);
-        outline: 0px solid;
-        outline-color: rgba(255, 255, 255, 0.05);
-        outline-offset: -10px;
-      }
-  
-      &:hover::after {
-        top: 10px;
-        left: 10px;
-        right: 10px;
-        bottom: 10px;
-        transform: scale(1);
-        outline: 1px solid;
-        outline-color: rgba(255, 255, 255, 0.6);
-        outline-offset: 10px;
-        transition: 0.5s outline-offset cubic-bezier(0.2, 0.8, 0.25, 0.8), 0.5s outline-color cubic-bezier(0.2, 0.8, 0.25, 0.8), 0.5s outline cubic-bezier(0.2, 0.8, 0.25, 0.8);
-      }
-    }
-  }
-  
-  /* slide 7 슬라이드7 캐치클라우드 */
-  
-  .portfolio_wrap {
-    display: flex;
-    position: relative;
-    width: 1440px;
-    height: 100vh;
-    margin: 0 auto;
-    overflow: hidden;
-    justify-content: space-between;
-    align-items: center;
-  
-    .port-img {
-      display: flex;
-      align-items: center;
-      width: 58%;
-      height: 100%;
-  
-      .imges-wrap-cc {
-        position: relative;
-        top: 20px;
-        left: 280px;
-        width: 42%;
-        height: 75%;
-        border-radius: 30px;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  
-        &:hover .imgs {
-          background-position: bottom;
-        }
-  
-        .imgs {
-          width: 100%;
-          height: 100%;
-          border-radius: 30px;
-          background-position: top;
-          transition: all 9s;
-        }
-  
-        .cc {
-          background: url("../images/cc-main.png") no-repeat 0 0;
-          background-size: cover;
-        }
-      }
-    }
-  }
-  
-  .text-head .pf-logo-pfl1-cc img {
     width: 60%;
   }
-  
-  .pfb2-cc {
-    position: absolute;
-    top: 75%;
-    left: 0;
-    display: flex;
-    gap: 30px;
-  
-    .but {
-      background-color: rgb(244, 253, 255);
-      position: relative;
-      width: 5.5vw;
-      height: 50px;
-      font-size: 1rem;
-      color: #000000;
-      border: 2px solid rgb(44, 102, 246);
-      border-radius: 8px;
-  
-      &:hover {
-        text-shadow: 0 0 20px rgba(44, 102, 246, 0.5);
-        box-shadow: inset 0 0 20px rgba(44, 102, 246, 0.5), 0 0 20px rgba(0, 102, 255, 0.2);
-      }
-  
-      &::after {
-        position: absolute;
-        content: "";
-        top: -10px;
-        left: -10px;
-        right: -10px;
-        bottom: -10px;
-        transition: 0.5s outline-color, 0.5s outline, 0.5s transform;
-        transition-timing-function: cubic-bezier(0.2, 0.8, 0.25, 0.8);
-        transform: scale3d(1.1, 1.3, 0);
-        outline: 0px solid;
-        outline-color: rgba(255, 255, 255, 0.05);
-        outline-offset: -10px;
-      }
-  
-      &:hover::after {
-        top: 10px;
-        left: 10px;
-        right: 10px;
-        bottom: 10px;
-        transform: scale(1);
-        outline: 1px solid;
-        outline-color: rgba(255, 255, 255, 0.6);
-        outline-offset: 10px;
-        transition: 0.5s outline-offset cubic-bezier(0.2, 0.8, 0.25, 0.8), 0.5s outline-color cubic-bezier(0.2, 0.8, 0.25, 0.8), 0.5s outline cubic-bezier(0.2, 0.8, 0.25, 0.8);
-      }
-    }
+  .port-texts .text-info .pf-info {
+    top: 35%;
+    width: 50%;
   }
-  
-  /* slide8 슬라이드8 스와로브스키 */
-  
-  .portfolio_wrap {
+  .port-texts .text-info .pf-info li {
     display: flex;
-    position: relative;
-    width: 1440px;
-    height: 100vh;
-    margin: 0 auto;
-    overflow: hidden;
-    justify-content: space-between;
     align-items: center;
-  
-    .port-img {
-      display: flex;
-      align-items: center;
-      width: 60%;
-      height: 100%;
-  
-      .imges-wrap-sw {
-        width: 90%;
-        height: 80%;
-        border-radius: 30px;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  
-        &:hover .imgs {
-          background-position: bottom;
-        }
-  
-        .imgs {
-          width: 100%;
-          height: 100%;
-          border-radius: 30px;
-          background-position: top;
-          transition: all 10s;
-        }
-  
-        .sw {
-          background: url("../images/Swarovski-main.png") no-repeat 0 0;
-          background-size: cover;
-        }
-      }
-    }
   }
-  
-  .text-head .pf-logo-pfl1-sw img {
-    width: 45%;
+  .port-texts .text-info .pf-info li .pf_info-title {
+    width: 100px;
   }
-  
-  .pfb2-sw {
-    position: absolute;
+}
+@media screen and (max-width: 425px) {
+  .depth1,
+  .depth2,
+  .depth4,
+  .depth5 {
+    display: none;
+  }
+  .sec2 .bubble-wrap {
+    height: 30%;
+  }
+  .sec2 .about-txt-wrap {
+    margin-top: 0;
+  }
+
+  .sec2 .bubble-wrap .bpb {
+    width: 150%;
+    top: 40%;
+  }
+  .sec2 .bubble-wrap .blob-bg {
+    width: 150%;
+    top: 30%;
+  }
+
+  .sec2 .about-txt-wrap .abtxt .about-me {
+    font-size: 20px;
+  }
+  .sec2 .about-txt-wrap .abtxt .about-intro {
+    font-size: 14px;
+  }
+  .portfolio_wrap .port-img .imges-wrap .kt4 {
+    background: url(../../images/main/KT4-m.jpg) no-repeat 0 0;
+    background-size: cover;
+  }
+  .port-texts .text-info .pf-info {
+    width: 90%;
+    top: 25%;
+  }
+  .port-texts {
+    height: 55%;
+  }
+  .pfb1,
+  .pfb2 {
+    width: 100%;
+    flex-direction: row;
+    top: 70%;
+    left: 0;
+  }
+  .sec4 .pfb2 {
     top: 75%;
     left: 0;
-    display: flex;
-    gap: 30px;
-  
-    .but {
-      background-color: rgb(244, 253, 255);
-      position: relative;
-      width: 5.5vw;
-      height: 50px;
-      font-size: 1rem;
-      color: #000000;
-      border: 2px solid rgb(44, 198, 189);
-      border-radius: 8px;
-  
-      &:hover {
-        text-shadow: 0 0 20px rgba(44, 198, 189, 0.5);
-        box-shadow: inset 0 0 20px rgba(44, 198, 189, 0.5), 0 0 20px rgba(0, 102, 255, 0.2);
-      }
-  
-      &::after {
-        position: absolute;
-        content: "";
-        top: -10px;
-        left: -10px;
-        right: -10px;
-        bottom: -10px;
-        transition: 0.5s outline-color, 0.5s outline, 0.5s transform;
-        transition-timing-function: cubic-bezier(0.2, 0.8, 0.25, 0.8);
-        transform: scale3d(1.1, 1.3, 0);
-        outline: 0px solid;
-        outline-color: rgba(255, 255, 255, 0.05);
-        outline-offset: -10px;
-      }
-  
-      &:hover::after {
-        top: 10px;
-        left: 10px;
-        right: 10px;
-        bottom: 10px;
-        transform: scale(1);
-        outline: 1px solid;
-        outline-color: rgba(255, 255, 255, 0.6);
-        outline-offset: 10px;
-        transition: 0.5s outline-offset cubic-bezier(0.2, 0.8, 0.25, 0.8), 0.5s outline-color cubic-bezier(0.2, 0.8, 0.25, 0.8), 0.5s outline cubic-bezier(0.2, 0.8, 0.25, 0.8);
-      }
-    }
   }
-  
+
+  .port-texts .text-info .text-head .pf-text span {
+    font-size: 14px;
+  }
+  .port-texts .text-info .text-head .pf-text {
+    font-size: 13px;
+  }
+  .port-texts .text-info .pf-info li .pf_info-title {
+    font-size: 14px;
+  }
+  .port-texts .text-info .pf-info li .pf_info-info {
+    font-size: 12px;
+  }
+}
