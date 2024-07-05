@@ -243,46 +243,47 @@ header {
   display: flex;
   justify-content: space-between;
   gap: 24px;
+
   .col1 {
     width: 25%;
     .profile-left-bottom {
       padding: 20px 20px;
     }
   }
-  .col2 {
-    width: 35%;
-    .course {
-      padding: 16px 24px;
-      margin-bottom: 20px;
-    }
-    .certificate {
-      padding: 16px 24px;
-      margin-bottom: 20px;
-    }
-  }
-  .col3 {
-    width: 40%;
-    .work {
-      padding: 16px 24px;
-      margin-bottom: 20px;
-    }
-
-    .education {
-      padding: 16px 24px;
-      margin-bottom: 20px;
-    }
-  }
-
-  .profile-bg {
-    overflow: hidden;
-    background-color: $background-color_1;
-    padding: 20px;
+}
+.col2 {
+  width: 35%;
+  .course {
+    padding: 16px 24px;
     margin-bottom: 20px;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+  }
+  .certificate {
+    padding: 16px 24px;
+    margin-bottom: 20px;
+  }
+}
+.col3 {
+  width: 40%;
+  .work {
+    padding: 24px 24px;
+    margin-bottom: 20px;
+  }
+
+  .education {
+    padding: 24px 24px;
+    margin-bottom: 20px;
+  }
+}
+
+.profile-bg {
+  overflow: hidden;
+  background-color: $background-color_1;
+  padding: 20px;
+  margin-bottom: 20px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -301,6 +302,12 @@ header {
 }
 
 .col {
+  .yerim {
+    font-size: 24px;
+    padding-bottom: 6px;
+    font-weight: 600;
+  }
+
   .name {
     font-size: 1.2rem;
     font-weight: 600;
